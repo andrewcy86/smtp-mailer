@@ -135,7 +135,7 @@ class SMTP_MAILER {
             wp_mail($to, $subject, $message);           
         }
         ?>
-        <form method="post" action="<?php echo htmlentities($_SERVER["REQUEST_URI"]); ?>">
+        <form method="post">
             <?php wp_nonce_field('smtp_mailer_test_email'); ?>
 
             <table class="form-table">
@@ -283,7 +283,7 @@ class SMTP_MAILER {
         
         ?>
 
-        <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+        <form method="post">
             <?php wp_nonce_field('smtp_mailer_general_settings'); ?>
 
             <table class="form-table">
